@@ -2,16 +2,16 @@
 import time
 
 #welcoming the user
-name = input("What is your name? ")
+name = raw_input("What is your name? ")
 
-print ("Hello, " + name, "Time to play hangman!")
+print "Hello, " + name, "Time to play hangman!"
 
-print ("")
+print ""
 
 #wait for 1 second
 time.sleep(1)
 
-print ("Start guessing...")
+print "Start guessing..."
 time.sleep(0.5)
 
 #here we set the secret
@@ -38,12 +38,12 @@ while turns > 0:
         if char in guesses:    
     
         # print then out the character
-            print(char),    
+            print char,    
 
         else:
     
         # if not found, print a dash
-            print ("_"),     
+            print "_",     
        
         # and increase the failed counter with one
             failed += 1    
@@ -52,7 +52,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:        
-        print("You won")
+        print "You won"  
 
     # exit the script
         break              
@@ -60,7 +60,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = input("guess a character:") 
+    guess = raw_input("guess a character:") 
 
     # set the players guess to guesses
     guesses += guess                    
@@ -72,13 +72,13 @@ while turns > 0:
         turns -= 1        
  
     # print wrong
-        print("Wrong")
+        print "Wrong"    
  
     # how many turns are left
-        print("You have", + turns, 'more guesses')
+        print "You have", + turns, 'more guesses' 
  
     # if the turns are equal to zero
         if turns == 0:           
     
         # print "You Lose"
-            print ("You Lose")
+            print "You Lose" 
