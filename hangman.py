@@ -4,7 +4,7 @@ import time
 #welcoming the user
 name = raw_input("What is your name? ")
 
-print "Witaj, " + name, "Time to play hangman!"
+print "Witaj, " + name, "Czas zagrac w wisielca"
 
 print ""
 
