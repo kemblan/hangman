@@ -1,98 +1,84 @@
-from graphics import Graphics
-from time import sleep
-import random
+#Zmiana importing the time module
+import time
 
+#welcoming the user
+name = raw_input("What is your name? ")
 
-class Hangman(object):
+print "Witaj, " + name, "Time to play hangman!"
 
-    def __init__(self, word):
-        self.word = word
-        self.used_letters = ""
-        self.current_letter = ""
+print ""
 
-    @property
-    def grid(self):
-        grid = ""
-        for i in self.word:
-            if i in self.used_letters:
-                grid += i
-            else:
-                grid += "_ "
-        return grid
+#wait for 1 second
+time.sleep(1)
 
-    def show_grid(self):
-        print("Used Letters: " + self.used_letters)
-        print("\n" + self.grid)
+print "Start guessing..."
+time.sleep(0.5)
 
-    def ask_letter(self):
-        while True:
-            letter = input("Guess a letter: ").lower()
-            self.current_letter = letter
-            if len(self.current_letter) > 1:
-                print("\nYou have entered to many letters!")
-            else:
-                if self.current_letter in self.used_letters:
-                    print("This letter has already been used!")
-                    continue
-                else:
-                    self.used_letters += self.current_letter + " "
-                    return "Letter Added"
+#here we set the secret
+word = "secret"
 
-    def check(self):
-        if self.current_letter in self.word:
-            if "_" in self.grid:
-                return "Continue Game"
-            else:
-                return "Winner"
+#creates an variable with an empty value
+guesses = ''
+
+#determine the number of turns
+turns = 5
+
+# Create a while loop
+
+#check if the turns are more than zero
+while turns > 0:         
+
+    # make a counter that starts with zero
+    failed = 0             
+
+    # for every character in secret_word    
+    for char in word:      
+
+    # see if the character is in the players guess
+        if char in guesses:    
+    
+        # print then out the character
+            print char,    
 
         else:
-            return "Not a letter"
+    
+        # if not found, print a dash
+            print "_",     
+       
+        # and increase the failed counter with one
+            failed += 1    
 
-    def winner(self):
-        print("\n")
-        print("You have won!!")
-        print("\nWould you like to play again?")
-        reply = input("Y/N?").lower()
-        if reply == "y":
-            print("\n")
-            main()
-        else:
-            print("Thank you for playing!")
-            exit()
+    # if failed is equal to zero
 
-    def lost(self):
-        print("\n")
-        print("You have lost!")
-        print(Graphics[0])
-        print("The word was: " + self.word)
-        sleep(2)
-        print("\nWould you like to play again?")
-        reply = input("Y/N?").lower()
-        if reply == "y":
-            print("\n")
-            main()
-        else:
-            print("Thank you for playing!")
-            exit()
+    # print You Won
+    if failed == 0:        
+        print "You won"  
 
+    # exit the script
+        break              
 
-def main():
-    words = ["hello", "goodbye"]
-    attempts = 8
-    hangman = Hangman(random.choice(words))
-    while attempts > 0:
-        hangman.show_grid()
-        hangman.ask_letter()
-        hangman.check()
-        if hangman.check() == "Winner":
-            hangman.winner()
-        if hangman.check() == "Not a letter":
-            attempts -= 1
-            print(Graphics[attempts])
-            print("{0} attempts remain".format(attempts))
-            print("\n")
-    hangman.lost()
+    print
 
+    # ask the user go guess a character
+    guess = raw_input("guess a character:") 
 
-if __name__ == "__main__":
-    main() 
+    # set the players guess to guesses
+    guesses += guess                    
+
+    # if the guess is not found in the secret word
+    if guess not in word:  
+ 
+     # turns counter decreases with 1 (now 9)
+        turns -= 1        
+ 
+    # print wrong
+        print "Wrong"    
+ 
+    # how many turns are left
+        print "You have", + turns, 'more guesses' 
+ 
+    # if the turns are equal to zero
+        if turns == 0:           
+    
+        # print "You Lose"
+            print "You Lose" 
