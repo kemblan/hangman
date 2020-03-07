@@ -2,26 +2,26 @@
 import time
 
 #welcoming the user
-name = raw_input("What is your name? ")
+name = raw_input("Como te llamas? ")
 
-print "Witaj, " + name, "Time to play hangman!"
+print "Hola, " + name, "es tiempo para jugar un juego"
 
 print ""
 
 #wait for 1 second
 time.sleep(1)
 
-print "Start guessing..."
+print "Empecemos ..."
 time.sleep(0.5)
 
 #here we set the secret
-word = "secret"
+word = "secreto"
 
 #creates an variable with an empty value
 guesses = ''
 
 #determine the number of turns
-turns = 5
+turns = 10
 
 # Create a while loop
 
@@ -52,7 +52,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:        
-        print "You won"  
+        print "ganas !!!"  
 
     # exit the script
         break              
@@ -60,7 +60,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = raw_input("guess a character:") 
+    guess = raw_input("adivinas mas:") 
 
     # set the players guess to guesses
     guesses += guess                    
@@ -72,13 +72,13 @@ while turns > 0:
         turns -= 1        
  
     # print wrong
-        print "Wrong"    
+        print "falso"    
  
     # how many turns are left
-        print "You have", + turns, 'more guesses' 
+        print "tienes", + turns, 'mas adivinas' 
  
     # if the turns are equal to zero
         if turns == 0:           
     
         # print "You Lose"
-            print "You Lose" 
+            print "" 
