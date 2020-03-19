@@ -2,20 +2,20 @@
 import time
 
 #welcoming the user
-name = raw_input("Como te llamas? ")
+name = raw_input("Cum te cheamă? ")
 
-print "Hola, " + name, "es tiempo para jugar un juego"
+print "Bună ziua, " + name, "este timpul să joci un joc"
 
 print ""
 
 #wait for 1 second
 time.sleep(1)
 
-print "Empecemos ..."
+print "Să începem ..."
 time.sleep(0.5)
 
 #here we set the secret
-word = "secreto"
+word = "secret"
 
 #creates an variable with an empty value
 guesses = ''
@@ -52,7 +52,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:        
-        print "ganas !!!"  
+        print "câștigi !!!"  
 
     # exit the script
         break              
@@ -60,7 +60,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = raw_input("adivinas mas:") 
+    guess = raw_input("ghici mai mult:") 
 
     # set the players guess to guesses
     guesses += guess                    
@@ -72,10 +72,10 @@ while turns > 0:
         turns -= 1        
  
     # print wrong
-        print "falso"    
+        print "fals"    
  
     # how many turns are left
-        print "tienes", + turns, 'mas adivinas' 
+        print "ai", + turns, 'mai banuiesc' 
  
     # if the turns are equal to zero
         if turns == 0:           
