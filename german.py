@@ -1,3 +1,4 @@
+#Изменение языка на Русский
 #Zmiana importing the time module
 import time
 
