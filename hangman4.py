@@ -12,7 +12,7 @@ print ""
 time.sleep(1)
 
 print "Lasst uns beginnen ..."
-time.sleep(0.5)
+time.sleep(0.6)
 
 #here we set the secret
 word = "Geheimnis"
