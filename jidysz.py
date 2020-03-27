@@ -5,7 +5,7 @@ Type "help", "copyright", "credits" or "license()" for more information.
 import time
 
 #welcoming the user
-name = raw_input("וואָס איז דיין נאָמען?")
+name = raw_input("וואָסאיז דיין נאָמען?")
 
 print "העלא, " + name, "עס איז צייט צו האַנגמאַן"
 
