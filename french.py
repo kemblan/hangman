@@ -11,11 +11,11 @@ print ""
 #wait for 1 second
 time.sleep(1)
 
-print "Commençons..."
+print "Commencons..."
 time.sleep(0.5)
 
 #here we set the secret
-word = "Secrète"
+word = "Secrete"
 
 #creates an variable with an empty value
 guesses = ''
@@ -52,7 +52,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:
-        print "Tu as gagné !!!"
+        print "Tu as gagne !!!"
 
     # exit the script
         break
@@ -75,7 +75,7 @@ while turns > 0:
         print "faux"
 
     # how many turns are left
-        print "tant:", + turns, 'tourne à gauche'
+        print "tant:", + turns, 'tourne a gauche'
 
     # if the turns are equal to zero
         if turns == 0:
