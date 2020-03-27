@@ -4,7 +4,7 @@ import time
 #welcoming the user
 name = raw_input("Guten Tag")
 
-print "Halo," + name, "es ist Zeit um Hangman zu Spielen"
+print "Halo," + name, "es ist Zeit um Hangman zu Spielen!"
 
 print ""
 
@@ -75,7 +75,7 @@ while turns > 0:
         print "falsch"
 
     # how many turns are left
-        print "so viele:", + turns, 'links abbiegen' 
+        print "so viele:", + turns, 'links abbiegen'
 
     # if the turns are equal to zero
         if turns == 0:
