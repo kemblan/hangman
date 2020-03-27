@@ -1,4 +1,4 @@
-#Zmiana importing the time module
+#Zmina importing the time module
 import time
 
 #welcoming the user
