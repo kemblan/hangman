@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Hangman {
+public class Hangman@ {
 
 	private static String[] words = {"terminator", "banana", "computer", "cow", "rain", "water" };
 	private static String word = words[(int) (Math.random() * words.length)];
