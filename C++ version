@@ -4,7 +4,7 @@ using namespace std;
 string player1,player2,word,underscore,guess;
 int wrong=0;
 int main ()
-string copy = word;
+string copy = word
 
 
 cout << "----------------------Hello! Welcome to the HANGMAN game!----------  ----------" << endl;
