@@ -1,3 +1,5 @@
+#edytowanie pliku MP
+
 #Zmina importing the time module
 import time
 
