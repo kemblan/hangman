@@ -2,20 +2,20 @@
 import time
 
 #welcoming the user
-name = raw_input("Cual es tu nombre?")
+name = raw_input("Как се казваш?")
 
-print "Hola," + name, "es hora de jugar el juego"
+print "Здравей" + name, "Време е да играем бесеница?"
 
 print ""
 
 #wait for 1 second
 time.sleep(1)
 
-print "Empecemos ..."
+print "Започвай да отгатваш"
 time.sleep(0.5)
 
 #here we set the secret
-word = "secreto"
+word = "тайна"
 
 #creates an variable with an empty value
 guesses = ''
@@ -52,7 +52,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:        
-        print "tu ganas !!!"  
+        print "Ти спечели"  
 
     # exit the script
         break              
@@ -60,7 +60,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = raw_input("adivina más:") 
+    guess = raw_input("познай буквата:") 
 
     # set the players guess to guesses
     guesses += guess                    
@@ -72,13 +72,13 @@ while turns > 0:
         turns -= 1        
  
     # print wrong
-        print "falso"    
+        print "грешнно"    
  
     # how many turns are left
-        print "tu", + turns, 'Nunca sospeché' 
+        print "ти имаш", + turns, 'още опити' 
  
     # if the turns are equal to zero
         if turns == 0:           
     
-        # print "You Lose"
-            print "" 
+        # print "Ти губиш"
+            print "Ти губиш" 
