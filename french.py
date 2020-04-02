@@ -11,7 +11,7 @@ print ""
 #wait for 1 second
 time.sleep(1)
 
-print "Commençons..."
+print "Commençon :s..."
 time.sleep(0.5)
 
 #here we set the secret
